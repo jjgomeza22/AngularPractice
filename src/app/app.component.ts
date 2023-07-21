@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   imageParent = 'https://www.w3schools.com/howto/img_avatar.png';
+
+  public onLoaded(img: string) {
+    console.log("Parent loaded", img);
+  }
 }
