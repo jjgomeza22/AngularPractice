@@ -46,6 +46,7 @@ export class AppComponent {
       image: 'https://static.platzi.com/media/user_upload/glasses-05350737-5831-4c98-be55-824399206dba.jpg'
     },
   ];
+  public showImage: boolean = true;
 
   public onLoaded(img: string) {
     console.log("Parent loaded", img);

@@ -1,10 +1,12 @@
 <p><input type="text" [(ngModel)]="imageParent" /></p>
+<button (click)="showImage = !showImage" type="button">Show image</button>
 <app-img
- [img]="imageParent"
- (loaded)="onLoaded($event)"
+  *ngIf="showImage"
+  [img]="imageParent"
+  (loaded)="onLoaded($event)"
 ></app-img>
-
+<hr>
 <app-product
- *ngFor="let product of products"
- [product]="product"
+  *ngFor="let product of products"
+  [product]="product"
 ></app-product>
