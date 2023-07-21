@@ -20,7 +20,7 @@ export class ImgComponent implements OnInit {
   }
 
   public imgError(){
-    this.img = this.imageDefault;
+    this.img = '';
   }
 
   public imgLoaded() {
