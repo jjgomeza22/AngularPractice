@@ -8,6 +8,7 @@ import { Product } from '../models/Product.model';
 })
 export class ProductsComponent implements OnInit {
 
+  public myShoppingCart: Product[] = [];
   public products: Product[] = [
     {
       id: '1',
@@ -46,10 +47,16 @@ export class ProductsComponent implements OnInit {
       image: 'https://static.platzi.com/media/user_upload/glasses-05350737-5831-4c98-be55-824399206dba.jpg'
     },
   ];
+  public totalPrice: number = 0;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public addProductToCart(product: Product) {
+    this.myShoppingCart.push(product);
+    this.totalPrice = this.myShoppingCart.reduce((sum, item) => sum + item.price, 0);
   }
 
 }
