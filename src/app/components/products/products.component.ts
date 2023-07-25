@@ -34,7 +34,7 @@ export class ProductsComponent implements OnInit {
   }
 
   public addProductToCart(product: Product) {
-    this.storeService.myShoppingCart.push(product);
+    this.storeService.addProduct(product);
     this.totalPrice = this.storeService.getTotal();
   }
 
