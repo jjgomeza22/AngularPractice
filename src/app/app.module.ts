@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { ImgComponent } from './components/img/img.component';
 import { ProductComponent } from './components/product/product.component';
 import { ProductsComponent } from './components/products/products.component';
+import { ReversePipe } from './pipes/reverse.pipe';
+import { TimeAgoPipe } from './pipes/time-ago.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ImgComponent,
     ProductComponent,
-    ProductsComponent
+    ProductsComponent,
+    ReversePipe,
+    TimeAgoPipe
   ],
   imports: [
     BrowserModule,

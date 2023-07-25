@@ -1,5 +1,9 @@
 <p>Cantidad: {{myShoppingCart.length}} </p>
 <p>Total: {{totalPrice}} </p>
+<p>Today: {{today | timeAgo}} </p>
+<p>Other day: {{ date | date: 'yyyy-dd-MM' }} </p>
+
+<p> {{'HOlas QUe MaS' | uppercase}} </p>
 
 <div class="products--grid">
   <app-product
